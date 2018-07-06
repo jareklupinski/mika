@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel=​"shortcut icon" type="image/png" href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAH1W5
+H1W6Jlm4Kl27O3m4AkzUAkzVEU/CElDDAlPoAlPpAlTpA1frBlnrAFf0AFf2AFj4HmTKFGDYKGzEI2vQXXu0
+ZH+xXpOjboCeZYCyeKGEgYtghZBlkKVZl6dkmKljmqxmlLBqp75gprxkprltnsF6nMF+qsFjq8JmrMVircZi
+qsx5tdBkuNRot9l5zu511/d32Ph4qK+UnMSHocaBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAk8bY+wAAAQB0Uk5T////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////AFP3ByUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAYdEVYdFNvZnR3YXJl
+AHBhaW50Lm5ldCA0LjAuNvyMY98AAACHSURBVChTbY3XDoJQEAVRrFjgWLCLCvaO+v+ftm4hJBLPw707ky0O
+FfJXhGVXSrcUmqgACKajABhu5iKYgVqdn91FO1RwOuNbulznwq/en7N9Ih0NFf3HZ4CmXWmp6fnw7ApNumqU
+WRxO8budMznRKr2+ZMpYRs5H/r2MWSy2WWmRpT8pCKIvXy2XA/pITWwAAAAASUVORK5CYII="/>
+<title>Puck Setup</title>
+<style type="text/css">
+body{background-color:#181817;color:#f2f2f2;font-family:open_sans,sans-serif;font-size:100%;}
+.outer{display:table;position:absolute;height:95%;width:95%;}
+.middle{display:table-cell;vertical-align:middle;}
+.inner{margin-left:auto;margin-right:auto;max-width:500px;text-align:center;}
+table{width:100%;background-color:#2B2B2B;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;-webkit-box-shadow:0px 0px 50px 25px rgba(61,61,61,0.5);-moz-box-shadow:0px 0px 50px 25px rgba(61,61,61,0.5);box-shadow:0px 0px 50px 25px rgba(61,61,61,0.5);}
+.leftColumn{text-align:right;}
+.rightColumn{text-align:left;width:40%;text-align:center;}
+.settingTitle{font-size:1.5em;}
+.settingText{font-size:0.75em;}
+td{padding:8px;}
+.inputField{background-color:#f2f2f2;color:#181817;width:93%;padding:5px;font-size:1.25em;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.headerText{font-size:2em;font-weight:600;}
+a{color:#f2f2f2;}
+</style>
+</head>
+<body>
+<div class="outer">
+<div class="middle">
+<div class="inner">
+<form action="" method="post">
+<table>
+<th colspan="2" style="position:relative;font-size:1.5em;padding:3%;text-align:center;border-bottom-color:rgba(242,242,242,.5);border-bottom-style:solid;border-bottom-width:1px;">
+Puck Setup
+<span style="font-size:0.5em;position:absolute;right:3px;"><a href="/log.html">View Log</a></span>
+</th>
+<tr>
+<td class="leftColumn">
+<span class="settingTitle">Wi-Fi Network Name</span><br>
+<span class="settingText">This Puck needs to connect to the internet to check your Imgur account for reputation changes. Please choose an Access Point that can connect to the internet.</span>
+</td>
+<td class="rightColumn">
+<select name="ssid" class="inputField" style="width:100%;">
+{SSIDLIST}
+</select>
+<br><br>
+<form action="/refresh">
+<input type="submit" value="Rescan Networks">
+</form>
+</td>
+</tr>
+<tr>
+<td class="leftColumn">
+<span class="settingTitle">Wi-Fi Password</span><br>
+<span class="settingText">If your Access Point needs a password or passphrase to connect, type that in here.</span>
+</td>
+<td class="rightColumn">
+<input type="password" name="pass" class="inputField">
+</td>
+</tr>
+<tr>
+<td class="leftColumn">
+<span class="settingTitle">My Name</span><br>
+<span class="settingText">After Setup is complete, you can reconnect to this Puck at any time by connecting to the Access Point this Puck will create. The newly created Access Point will be called the name you type in here.</span>
+</td>
+<td class="rightColumn">
+<input type="text" name="apnm" class="inputField">
+</td>
+</tr>
+<tr>
+<td class="leftColumn">
+<span class="settingTitle">My Password</span><br>
+<span class="settingText">The Access Point this Puck creates will be protected using this password. Make sure you remember it! If you ever forget your password, you will have to press the Reset button and reset the Puck to its factory settings, then run Setup again.</span>
+</td>
+<td class="rightColumn">
+<input type="password" name="appa" class="inputField">
+</td>
+</tr>
+<tr>
+<td class="leftColumn">
+<span class="settingTitle">Imgur Account</span><br>
+<span class="settingText">This Puck is configured to connect to Imgur and monitor the Reputation of any user. Please type the Imgur username of the user you wish to monitor here. If the Puck cannot retrieve the user's name, the middle dot will blink red and yellow. Please doublecheck the user name matching their name on Imgur exactly.</span>
+</td>
+<td class="rightColumn">
+<input type="text" name="user" class="inputField">
+</td>
+</tr>
+<tr>
+<td class="leftColumn">
+<span class="settingTitle">Save Changes</span><br>
+<span class="settingText">Press Save to save the settings above to the Puck. The Puck will restart and create an Access Point. The Access Point's name will be the name typed in above. Connect to this newly created Access Point and point your browser to http://1.1.1.1 to access the Puck's dashboard and manage settings. If you need to restore the Puck to factory settings, press the Reset button on the Puck.</span>
+</td>
+<td class="rightColumn">
+<input type="submit" value="Save" class="inputField">
+</td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

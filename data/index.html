@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<style>
+table, th, td {
+border: 3px outset #545454;
+border-collapse:collapse;
+padding:10px;
+text-align:center;
+}
+ul#navigation {list-style:none;position:relative; z-index:2;top:1px;display:table;border-left:1px solid #f5ab36;}
+ul#navigation li {float:left;}
+ul#navigation li a {background:#ffd89b;color:#222;display:block;padding:6px 15px;text-decoration:none;border-right:1px solid #f5ab36;border-top:1px solid #f5ab36;border-right:1px solid #f5ab36;margin:0;}
+ul#navigation li a.selected {border-bottom:1px solid #fff;color:#344385;background:#fff;}
+</style>
+<title>MIKA</title>
+</head>
+<body style="background-color:#121211;color:#9896B3;font-family:Verdana,Geneva,sans-serif;font-weight:100;">
+<center>
+<div style="display:table;position:absolute;height:100%;width:100%;text-align:center;">
+<div style="display:table-cell;vertical-align:middle;">
+<div style="margin-left:auto;margin-right:auto;width:90%;max-width:550px;">
+<span style='font-weight:600;'>Interactive #1 Settings</span><br><br>
+<form action='/settings' method='POST'>
+<table style='width:100%;'>
+<tr>
+<td>Red</td>
+<td><input type="range" name="red" min="0" max="255"></td>
+</tr>
+<tr>
+<td>Blue</td>
+<td><input type="range" name="blue" min="0" max="255"></td>
+</tr>
+<tr>
+<td>Green</td>
+<td><input type="range" name="green" min="0" max="255"></td>
+</tr>
+<tr>
+<td>Speed</td>
+<td><input type="radio" name="speed" value="fast" checked> Fast<br>
+  <input type="radio" name="speed" value="medium"> Medium<br>
+  <input type="radio" name="speed" value="slow"> Slow</td>
+</tr>
+<tr>
+<td>Submit</td>
+<td><input type="submit" value="Submit"></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
